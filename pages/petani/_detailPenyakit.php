@@ -22,7 +22,7 @@
             echo "</div></div>";
         }
     ?>
-    <a class="premium" href=""><img src="../../assets/button_premium.jpg" alt=""></a>
+    <a class="premium" href="_premiumPage.php"><img src="../../assets/button_premium.jpg" alt=""></a>
 </body>
 </html>
 <style>

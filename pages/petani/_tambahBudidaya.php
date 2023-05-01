@@ -10,7 +10,7 @@
     <?php
         include "../../controller/conn.php";
 
-        if(isset($gambar) || isset($nama_budidaya) || isset($deskripsi)){
+        if(isset($_POST['submit'])){
             $gambar = $_POST['gambar'];
             $nama_budidaya = $_POST['nama_budidaya'];
             $deskripsi = $_POST['deskripsi'];

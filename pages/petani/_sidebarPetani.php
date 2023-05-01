@@ -4,13 +4,13 @@
         <img src="../../assets/logo_sidebar.jpg" alt="">
         <!-- <li><a href="profilePetani.php"><i class="fa-solid fa-user"></i>Profile</a></li> -->
         <br><br><br><br>
-        <li><a href="#"><i class="fa-solid fa-compass"></i>Home</a></li>
-        <li><a href="_katalogPenyakit.php"><i class="fa-solid fa-bug"></i>Katalog Penyakit</a></li>
-        <li><a href="_katalogBudidaya.php"><i class="fa-solid fa-lemon"></i>Katalog Budidaya</a></li>
-        <li><a href="_kalkulatorPupuk.php"><i class="fa-solid fa-calculator"></i>Kalkulasi pupuk</a></li>
-        <li><a href="#"><i class="fa-solid fa-seedling"></i>Formulasi pupuk</a></li>
-        <li><a href="#"><i class="fa-solid fa-book"></i>Pencatatan</a></li>
-        <li><a href="_cuaca.php"><i class="fa-solid fa-cloud"></i>Cuaca</a></li>
+        <li class="nav"><a href="_dashboardPetani.php"><i class="fa-solid fa-compass"></i>Home</a></li>
+        <li class="nav"><a href="_katalogPenyakit.php"><i class="fa-solid fa-bug"></i>Katalog Penyakit</a></li>
+        <li class="nav"><a href="_katalogBudidaya.php"><i class="fa-solid fa-lemon"></i>Katalog Budidaya</a></li>
+        <li class="nav"><a href="_kalkulatorPupuk.php"><i class="fa-solid fa-calculator"></i>Kalkulasi pupuk</a></li>
+        <li class="nav"><a href="#"><i class="fa-solid fa-seedling"></i>Formulasi pupuk</a></li>
+        <li class="nav"><a href="#"><i class="fa-solid fa-book"></i>Pencatatan</a></li>
+        <li class="nav"><a href="_cuaca.php"><i class="fa-solid fa-cloud"></i>Cuaca</a></li>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <!-- <li><a href="../../config/logout.php"><i class="fa-solid fa-power-off"></i>Logout</a></li> -->
     </ul>
@@ -80,7 +80,7 @@ main {
     transition: all 0.5s ease;
 }
 
-ul li:hover a {
+ul .nav:hover a {
     background: #6CBB08;
     color: white;
 }

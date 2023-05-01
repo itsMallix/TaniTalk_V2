@@ -17,20 +17,6 @@
         if($_SESSION['level']==""){
             header("locaation:../index.php?pesan=gagal");
         }
-
-        // $query = "SELECT * FROM katalog_budidaya";
-        // $hasil = mysqli_query($conn,$query);
-
-        // echo "<br><br><br><br><br><br>";
-        // while($row = mysqli_fetch_array($hasil)){
-        //     echo "<div class='cardRow'>";
-        //     echo "<div class='cardCol'>";
-        //     echo "<div class='card'>";
-        //     echo "<img class='thumbnail' src='../../assets/upload_budidaya/" .$row['gambar'] ."'alt='gambar'>";
-        //     // echo "<h3 class='judul'>" . $row['judul'] . "</h3>";
-        //     // echo "<p class='deskripsi'>" . $row['deskripsi'] . "</p>";
-        //     echo "</div></div>";
-        // }
     ?>
     <div class="head">
         <div class="content">
@@ -40,18 +26,18 @@
     </div>
     <div class="list_content">
         <div class="list_item">
-            <ul>
-                <li>
-                    <img class="icon" src="../../assets/kopi_icon.png" alt="">
+            <ul class="list_item_item">
+                <li class="list_data">
+                    <a href=""><img class="icon" src="../../assets/kopi_icon.png" alt=""></a>
                 </li>
-                <li>
-                    <img class="icon" src="../../assets/kakao_icon.png" alt="">
+                <li class="list_data">
+                    <a href="_showBudidaya.php" target="_blank"><img class="icon" src="../../assets/kakao_icon.png" alt=""></a>
                 </li>
-                <li>
-                    <img class="icon" src="../../assets/apel_icon.png" alt="">
+                <li class="list_data">
+                    <a href=""><img class="icon" src="../../assets/apel_icon.png" alt=""></a>
                 </li>
-                <li>
-                    <img class="icon" src="../../assets/anggur_icon.png" alt="">
+                <li class="list_data">
+                    <a href=""><img class="icon" src="../../assets/anggur_icon.png" alt=""></a>
                 </li>
             </ul>
         </div>
