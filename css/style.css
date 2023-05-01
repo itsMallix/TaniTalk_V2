@@ -1,0 +1,44 @@
+/* STYLE LOGIN */
+.textLogin{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.box{
+    width: 350px;
+    background: white;
+    margin: 80px auto;
+    padding: 30px 20px;
+    box-shadow: 0 0 100px 4px #d6d6d6;
+}
+
+label{
+    font-size: 11pt;
+}
+
+.formLogin{
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    font-size: 11pt;
+    margin-bottom: 20px;
+}
+
+.loginBtn{
+    background: #2aa7e2;
+    color: white;
+    font-size: 11pt;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+
+.alert{
+    background: #e44e4e;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #b32929;
+}
+/* STYLE LOGIN TUTUP */
