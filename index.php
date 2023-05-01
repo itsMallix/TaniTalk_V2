@@ -10,7 +10,7 @@
     <div class="navbar">
         <a href="#" class="logo"><img src="assets/logo.png" alt="TaniTalk"></a>
         <div class="signup">
-            <a href="register.php">Sign Up</a>
+            <a href="signup.php">Sign Up</a>
         </div>
         <div class="login">
             <a href="login.php">Login</a>

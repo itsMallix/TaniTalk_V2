@@ -10,7 +10,23 @@
     <?php
         include "_sidebarPetani.php";
         include "../../_navbar.php"; 
-        // echo "<br><br><br><br><br><br>";
+        
+        if(isset($_POST['hitung'])){
+            $dosis = 0.33;
+
+            if($_POST['pola']=='3'){
+                $jumlah_tanaman = ($_POST['luaslahan'])/($_POST['jarakTanam1'])*($_POST['luaslahan'])/($_POST['jarakTanam2']);
+                $hasil = $jumlah_tanaman * $dosis;
+            }elseif($_POST['pola']=='5'){
+                $jumlah_tanaman = ($_POST['luaslahan']/($_POST['jarakTanam1']+$_POST['jarakTanam2']))*2;
+                $hasil = $jumlah_tanaman * $dosis;
+            }elseif($_POST['pola']=='4'){
+                $jumlah_tanaman = ($_POST['luaslahan']/($_POST['jarakTanam1']*$_POST['jarakTanam2']));
+                $hasil = $jumlah_tanaman * $dosis;
+            }else{
+                $hasil = 0;
+            }
+        }
     ?>
     <div class="container">
         <div class="content">
@@ -35,7 +51,7 @@
             <div class="polaTanam">
                 <h2>Pola Penanaman</h2>
                 <div class="dropdown">
-                    <select>
+                    <select name="pola">
                         <option value="3">Persegi</option>
                         <option value="4">Persegi Panjang</option>
                         <option value="5">Segitiga</option>
@@ -45,8 +61,10 @@
             <br>
             <hr>
             <div class="jarakTanam">
-                <h2>Jarak Tanam Sisi</h2>
-                <input class ="kalkulator_form" type="num" name="luaslahan" placeholder="0.0">
+                <h2>Jarak Tanam Sisi 1</h2>
+                <input class ="kalkulator_form_jarak" type="num" name="jarakTanam1" placeholder="0.0">
+                <h2>Jarak Tanam Sisi 2</h2>
+                <input class ="kalkulator_form_jarak" type="num" name="jarakTanam2" placeholder="0.0">
             </div>
             <br>
             <hr>
@@ -76,7 +94,9 @@
                     </select>
                 </div>
             </div>
-            <button class="hitung">Hitung</button>
+            <button class="hitung" name="hitung">Hitung</button>
+            <br>
+            <?php echo "<h2> Hasil : $hasil </h2>"?>
         </form>
     </div>
 </body>
@@ -105,13 +125,23 @@
     width: 100%;
     margin-top: 10px;
 }
-.luasLahan, .polaTanam, .jarakTanam{
+.jarakTanam{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.luasLahan, .polaTanam{
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
 }
 h2{
     padding-right: 20px;
+}
+.kalkulator_form_jarak{
+    margin-left: 55px;
+    width: 300px;
+    border: none;
 }
 .kalkulator_form{
     width: 600px;
@@ -125,7 +155,7 @@ h2{
 
 .container{
     background-color: #E9E9E9;
-    height: 300px;
+    height: 320px;
 }
 
 .content a{
@@ -150,7 +180,7 @@ h2{
   border-radius: 4px;
   cursor: pointer;
   width: 10%;
-  margin-left: 455px;
+  margin-left: 480px;
   margin-top: 10px;
   
 }

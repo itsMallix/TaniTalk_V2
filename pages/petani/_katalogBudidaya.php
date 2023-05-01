@@ -35,7 +35,7 @@
     <div class="head">
         <div class="content">
             <br><br><br><br><br>
-            <button class="tambah"><i class="fa-solid fa-circle-plus"></i>  Tambah</button>
+            <a href="_tambahBudidaya.php"><button class="tambah"><i class="fa-solid fa-circle-plus"></i>  Tambah</button></a>
         </div>
     </div>
     <div class="list_content">

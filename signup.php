@@ -42,18 +42,18 @@
             <h1>FORM SIGN UP</h1>
             <form action="controller/signup.php" method="post">
                 <label>Nama</label>
-                <input type="text" name="name" class="formLogin" placeholder="Masukkan Nama" required="required">
+                <input type="text" name="nama" class="formLogin" placeholder="Masukkan Nama" required="required">
 
                 <label>Email</label>
-                <input type="text" name="username" class="formLogin" placeholder="Masukkan Email" required="required">
+                <input type="text" name="email" class="formLogin" placeholder="Masukkan Email" required="required">
     
                 <label>Password</label>
                 <input type="password" name="password" class="formLogin" placeholder="Masukkan Password" required="required">
     
                 <label>Level</label>
-                <input type="text" name="password" class="formLogin" placeholder="petani atau pengelola" required="required">
+                <input type="text" name="level" class="formLogin" placeholder="petani atau pengelola" required="required">
 
-                <input type="submit" class="loginBtn" value="Login">
+                <input type="submit" class="loginBtn" value="Login" name="submit">
                 <p>Sudah Punya akun?<a href="login.php">Log In</a></p>
             </form>
         </div>
