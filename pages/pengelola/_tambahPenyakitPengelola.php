@@ -18,7 +18,10 @@
             $tmp_file = $_FILES['gambar']['tmp_name'];
 
             $query = "insert into katalog_penyakit(nama_penyakit,deskripsi,pengelola,gambar) values('$nama_penyakit','$deskripsi', 1,'$nama_file')";
-            if(mysqli_query($conn,$query)){
+            
+            if(empty($nama_penyakit) || empty($deskripsi)){
+                echo "<script type='text/javascript'>alert('Field tidak boleh kosong');window.location='_tambahPenyakitPengelola.php';</script>";
+            }elseif(mysqli_query($conn,$query)){
                 $lokasi = "../../assets/upload_penyakit/". $nama_file;
                 move_uploaded_file($tmp_file,$lokasi);
                 echo "<script type='text/javascript'>alert('Data berhasil ditambahkan');window.location='_tambahPenyakitPengelola.php';</script>";
@@ -31,7 +34,7 @@
     ?>
     <div class="container">
         <div class="content">
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
                 <h2>TAMBAH DATA PENYAKIT</h2>
                 <label>Gambar</label>
                 <input type="file" name="gambar" id="">

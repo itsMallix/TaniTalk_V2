@@ -23,19 +23,15 @@
         <?php
             echo "<tr><th>No</th><th>Nama Budidaya</th><th>Deskripsi</th><th>Gambar</th><th>Aksi</th></tr>";
             while($row = mysqli_fetch_assoc($hasil)){
-                echo "<tr>";
-                echo "<td>" . $row['id'] . "</td>";
-                echo "<td>" . $row['judul'] . "</td>";
-                echo "<td>" . $row['deskripsi'] . "</td>";
-                echo "<td>" . $row['gambar'] . "</td>";
-                echo "<td><button class='delete' name='delete' data-id='" .$row['id'] . "'>Hapus</button></td>";
-                echo "</tr>";
+                echo "
+                <tr>
+                    <td>$row[id]</td>
+                    <td>$row[judul]</td>
+                    <td>$row[deskripsi]</td>
+                    <td>$row[gambar]</td>
+                    <td><a href='../../controller/hapus.php?id=$row[id]'>HAPUS</a></td>
+                ";
             }
-        if(isset($_POST['delete'])){
-            $id = $_POST['id'];
-            $delete = "delete from katalog_budidaya where id = '$id'";
-            mysqli_query($conn,$delete);
-        }
         ?>
     </table>
     </body>
