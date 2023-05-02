@@ -8,7 +8,27 @@
 </head>
 <body>
     <?php
+        // include "../../controller/conn.php";
+
+        // if(isset($_POST['submit'])){
+            // $gambar = $_POST['gambar'];
+            // $nama_budidaya = $_POST['nama_budidaya'];
+            // $deskripsi = $_POST['deskripsi'];
+            // $nama_file = $_FILES['gambar']['name'];
+            // $tmp_file = $_FILES['gambar']['tmp_name'];
+
+        //     $query = "insert into katalog_budidaya(judul,deskripsi,pengelola,gambar) values('$nama_budidaya','$deskripsi', 1,'$nama_file')";
+        //     if(mysqli_query($conn,$query)){
+        //         $lokasi = "../../assets/upload_budidaya/". $nama_file;
+        //         move_uploaded_file($tmp_file,$lokasi);
+        //         echo "<script type='text/javascript'>alert('Data berhasil ditambahkan');window.location='_tambahBudidaya.php';</script>";
+        //     }else{
+        //         echo "<script type='text/javascript'>alert('Gagal');window.location='_tambahBudidaya.php';</script>";
+        //     }
+        // }
         include "../../controller/conn.php";
+
+        $katalogBudidaya = new KatalogBudidaya($conn);
 
         if(isset($_POST['submit'])){
             $gambar = $_POST['gambar'];
@@ -17,17 +37,28 @@
             $nama_file = $_FILES['gambar']['name'];
             $tmp_file = $_FILES['gambar']['tmp_name'];
 
-            $query = "insert into katalog_budidaya(judul,deskripsi,pengelola,gambar) values('$nama_budidaya','$deskripsi', 1,'$nama_file')";
-            if(mysqli_query($conn,$query)){
-                $lokasi = "../../assets/upload_budidaya/". $nama_file;
-                move_uploaded_file($tmp_file,$lokasi);
-                echo "<script type='text/javascript'>alert('Data berhasil ditambahkan');window.location='_tambahBudidaya.php';</script>";
-            }else{
-                echo "<script type='text/javascript'>alert('Gagal');window.location='_tambahBudidaya.php';</script>";
-            }
+            $katalogBudidaya->tambahBudidaya($gambar, $nama_budidaya, $deskripsi, $nama_file, $tmp_file);
         }
 
-        
+        class KatalogBudidaya {
+            private $conn;
+
+            public function __construct($conn) {
+                $this->conn = $conn;
+            }
+
+            public function tambahBudidaya($gambar, $nama_budidaya, $deskripsi, $nama_file, $tmp_file) {
+                $query = "insert into katalog_budidaya(judul,deskripsi,pengelola,gambar) values('$nama_budidaya','$deskripsi', 1,'$nama_file')";
+
+                if(mysqli_query($this->conn, $query)){
+                    $lokasi = "../../assets/upload_budidaya/". $nama_file;
+                    move_uploaded_file($tmp_file, $lokasi);
+                    echo "<script type='text/javascript'>alert('Data berhasil ditambahkan');window.location='_tambahBudidaya.php';</script>";
+                }else{
+                    echo "<script type='text/javascript'>alert('Gagal');window.location='_tambahBudidaya.php';</script>";
+                }
+            }
+        }
     ?>
     <div class="container">
         <div class="content">

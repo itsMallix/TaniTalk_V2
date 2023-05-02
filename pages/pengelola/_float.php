@@ -8,12 +8,24 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="floating_container">
+    </div>
+    <div class="floating_container_1">
         <div class="floating_btn">
             <div class="element">
-                <a href="_tambahPenyakitPengelola" target="_blank">
+                <a href="_editBudidayaPengelola.php" target="_blank">
                     <span class="float_element">
-                        <i class="fa-solid fa-plus"></i>
+                        <i class="fa-solid fa-pen-to-square"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="floating_container_2">
+        <div class="floating_btn">
+            <div class="element">
+                <a href="_hapusBudidayaPengelola.php" target="_blank">
+                    <span class="float_element">
+                        <i class="fa-solid fa-trash"></i>
                     </span>
                 </a>
             </div>
@@ -27,15 +39,6 @@
         background: #eaedf2;
     }
 
-    .floating_container{
-        position: fixed;
-        width: 100px;
-        height: 100px;
-        bottom: 0;
-        right: 0;
-        margin: 35px 25px;
-    }
-
     .floating_container_1{
         position: fixed;
         width: 100px;
@@ -43,7 +46,7 @@
         bottom: 0;
         right: 0;
         margin-right: 25px;
-        margin-bottom: 112px;
+        margin-bottom: 40px;
     }
 
     .floating_container_2{
@@ -53,7 +56,7 @@
         bottom: 0;
         right: 0;
         margin-right: 25px;
-        margin-bottom: 190px;
+        margin-bottom: 115px;
     }
 
     .floating_container:hover{

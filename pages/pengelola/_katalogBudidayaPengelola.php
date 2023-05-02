@@ -13,6 +13,7 @@
         include "_sidebarPengelola.php";
         include "../../controller/conn.php";
         include "_navbar.php";
+        include "_float.php";
 
         if($_SESSION['level']==""){
             header("locaation:../index.php?pesan=gagal");

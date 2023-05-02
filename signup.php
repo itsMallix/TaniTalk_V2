@@ -40,7 +40,7 @@
         </div>
         <div class="formBoxBox">
             <h1>FORM SIGN UP</h1>
-            <form action="controller/signup.php" method="post">
+            <form action="controller/_signup.php" method="post">
                 <label>Nama</label>
                 <input type="text" name="nama" class="formLogin" placeholder="Masukkan Nama" required="required">
 

@@ -34,7 +34,7 @@
         </div>
         <div class="formBoxBox">
             <h1>FORM LOGIN</h1>
-            <form action="controller/login.php" method="post">
+            <form action="controller/_login.php" method="post">
                 <label>Email</label>
                 <input type="text" name="email" class="formLogin" placeholder="Masukkan Email" required="required">
     
