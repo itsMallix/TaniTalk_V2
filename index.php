@@ -17,10 +17,11 @@
         </div>
     </div>
     <div class="title">
+        <p class="judul">TANI TALK</p>
+        <p class="isi">Bergabung dengan jutaan user yang lainnya...</p>
     </div>
 </body>
 </html>
-
 <style>
     /* Style untuk navbar */
     .navbar {
@@ -30,6 +31,7 @@
         top: 0;
         width: 100%;
         margin-top: 20px;
+        z-index: 0;
     }
 
     /* Style untuk logo */
@@ -73,5 +75,19 @@
          -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
+    }
+    .title{
+        margin-top: 350px;
+        margin-left: 30px;
+    }
+    .judul{
+        font-weight: bold;
+        font-size: 100px;
+        color: grey;
+        line-height: 0;
+    }
+    .isi{
+        line-height: 0;
+        color: grey;
     }
   </style>
