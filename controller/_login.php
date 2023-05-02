@@ -38,8 +38,8 @@ class User {
                 echo "<script type='text/javascript'>alert('Email atau password salah');window.location='../register.php';</script>";
                 header("location:../login.php;");
             }
-        }
-        else{
+        }else{
+            echo "<script type='text/javascript'>alert('Email atau password salah');window.location='../register.php';</script>";
             header("location:../login.php");
         }
     }

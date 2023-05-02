@@ -29,7 +29,10 @@
                     <td>$row[judul]</td>
                     <td>$row[deskripsi]</td>
                     <td>$row[gambar]</td>
-                    <td><a href='../../controller/hapus.php?id=$row[id]'>HAPUS</a></td>
+                    <td>
+                        <a href='../../controller/hapus.php?id=$row[id]'>HAPUS</a>
+                        <a href='_editBudidayaPengelola.php?id=$row[id]'>EDIT</a>
+                    </td>
                 ";
             }
         ?>

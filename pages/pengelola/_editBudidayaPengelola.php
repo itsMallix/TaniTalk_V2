@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Form Budidaya</title>
+</head>
+<body>
+    <?php
+        include "../../controller/conn.php";
+        
+        $sql = "select * from katalog_budidaya";
+        $hasil = $conn->query($sql);
+        
+        $data = $hasil->fetch_assoc();
+    ?>
+	<h1>Edit Budidaya</h1>
+	<form action="../../controller/update.php" method="post" enctype="multipart/form-data">
+		<input type="hidden" id="id_budidaya" name="id_budidaya" value="">
+
+		<label for="nama_penyakit">Nama Penyakit</label>
+		<input type="text" id="nama_pbudidaya" name="judul" value="<?= $data['judul']?>">
+
+		<label for="deskripsi_penyakit">Deskripsi Penyakit</label>
+		<textarea id="deskripsi_penyakit" name="deskripsi"><?= $data['deskripsi']?></textarea>
+
+		<label for="gambar_penyakit">Gambar Penyakit</label>
+		<!-- <div class="image-preview">
+			<img id="gambar_preview" src="">
+		    <p>Pilih gambar</p>
+	    </div> -->
+	    <input type="file" id="gambar_penyakit" name="gambar" onchange="previewImage();" required>
+
+	    <input type="submit" name="submit" value="Simpan">
+    </form>
+</body>
+</html>
+
+<style>
+		body {
+			font-family: Arial, sans-serif;
+			background-color: #f5f5f5;
+			margin: 0;
+			padding: 0;
+		}
+
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+
+		form {
+			max-width: 600px;
+			margin: 0 auto;
+			background-color: #fff;
+			padding: 30px;
+			box-shadow: 0px 0px 10px rgba(0,0,0,0.2);
+			border-radius: 5px;
+			margin-top: 50px;
+		}
+
+		input[type="text"], textarea {
+			width: 100%;
+			padding: 10px;
+			border: none;
+			border-radius: 3px;
+			margin-bottom: 20px;
+			font-size: 16px;
+			background-color: #f5f5f5;
+		}
+
+		input[type="submit"] {
+			background-color: #4CAF50;
+			color: #fff;
+			padding: 10px 20px;
+			border: none;
+			border-radius: 3px;
+			cursor: pointer;
+			font-size: 16px;
+		}
+
+		input[type="submit"]:hover {
+			background-color: #3e8e41;
+		}
+
+		label {
+			display: block;
+			font-size: 16px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+
+		textarea {
+			height: 150px;
+		}
+
+		.image-preview {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 150px;
+			margin-bottom: 20px;
+			border: 2px dashed #ccc;
+			position: relative;
+		}
+
+		.image-preview img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+			position: absolute;
+		}
+
+		.image-preview p {
+			position: absolute;
+			margin: 0;
+			padding: 10px;
+			background-color: #000;
+			color: #fff;
+			opacity: 0.7;
+			transition: opacity 0.3s ease-in-out;
+			font-size: 16px;
+		}
+
+		.image-preview:hover p {
+			opacity: 1;
+		}
+	</style>

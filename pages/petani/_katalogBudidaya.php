@@ -28,16 +28,16 @@
         <div class="list_item">
             <ul class="list_item_item">
                 <li class="list_data">
-                    <a href=""><img class="icon" src="../../assets/kopi_icon.png" alt=""></a>
+                    <a href=""><img class="icon" src="../../assets/icon_kopi.png" alt=""></a>
                 </li>
                 <li class="list_data">
-                    <a href="_showBudidaya.php" target="_blank"><img class="icon" src="../../assets/kakao_icon.png" alt=""></a>
+                    <a href="_showBudidaya.php" target="_blank"><img class="icon" src="../../assets/icon_kakao.png" alt=""></a>
                 </li>
                 <li class="list_data">
-                    <a href=""><img class="icon" src="../../assets/apel_icon.png" alt=""></a>
+                    <a href=""><img class="icon" src="../../assets/icon_apel.png" alt=""></a>
                 </li>
                 <li class="list_data">
-                    <a href=""><img class="icon" src="../../assets/anggur_icon.png" alt=""></a>
+                    <a href=""><img class="icon" src="../../assets/icon_anggur.png" alt=""></a>
                 </li>
             </ul>
         </div>
