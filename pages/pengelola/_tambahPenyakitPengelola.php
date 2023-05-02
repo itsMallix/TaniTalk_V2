@@ -12,16 +12,16 @@
 
         if(isset($_POST['submit'])){
             $gambar = $_POST['gambar'];
-            $nama_budidaya = $_POST['nama_budidaya'];
+            $nama_penyakit = $_POST['nama_penyakit'];
             $deskripsi = $_POST['deskripsi'];
             $nama_file = $_FILES['gambar']['name'];
             $tmp_file = $_FILES['gambar']['tmp_name'];
 
-            $query = "insert into katalog_budidaya(judul,deskripsi,pengelola,gambar) values('$nama_budidaya','$deskripsi', 1,'$nama_file')";
+            $query = "insert into katalog_penyakit(nama_penyakit,deskripsi,pengelola,gambar) values('$nama_penyakit','$deskripsi', 1,'$nama_file')";
             if(mysqli_query($conn,$query)){
-                $lokasi = "../../assets/upload_budidaya/". $nama_file;
+                $lokasi = "../../assets/upload_penyakit/". $nama_file;
                 move_uploaded_file($tmp_file,$lokasi);
-                echo "<script type='text/javascript'>alert('Data berhasil ditambahkan');window.location='_tambahBudidaya.php';</script>";
+                echo "<script type='text/javascript'>alert('Data berhasil ditambahkan');window.location='_tambahPenyakitPengelola.php';</script>";
             }else{
                 echo "<script type='text/javascript'>alert('Gagal');window.location='_tambahBudidaya.php';</script>";
             }
@@ -32,12 +32,12 @@
     <div class="container">
         <div class="content">
             <form action="" method="post">
-                <h2>TAMBAH DATA BUDIDAYA</h2>
+                <h2>TAMBAH DATA PENYAKIT</h2>
                 <label>Gambar</label>
                 <input type="file" name="gambar" id="">
                 <br><br>
                 <label>Nama Penyakit</label><br>
-                <input type="text" name="nama_budidaya" id="" placeholder="nama budidaya">
+                <input type="text" name="nama_penyakit" id="" placeholder="nama penyakit">
                 <br><br>
                 <label>Deskripsi</label><br>
                 <input type="text" name="deskripsi" id="" placeholder="deskripsi">

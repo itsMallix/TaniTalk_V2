@@ -11,7 +11,7 @@
     <div class="floating_container">
         <div class="floating_btn">
             <div class="element">
-                <a href="tambahKatalog.php">
+                <a href="_tambahPenyakitPengeloa.php" target="_blank">
                     <span class="float_element">
                         <i class="fa-solid fa-plus"></i>
                     </span>
