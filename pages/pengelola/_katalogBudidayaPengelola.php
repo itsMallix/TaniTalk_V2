@@ -29,16 +29,16 @@
         <div class="list_item">
             <ul class="list_item_item">
                 <li class="list_data">
-                    <a href=""><img class="icon" src="../../assets/kopi_icon.png" alt=""></a>
+                    <a href=""><img class="icon" src="../../assets/icon_kopi.png" alt=""></a>
                 </li>
                 <li class="list_data">
-                    <a href="_showBudidayaPengelola.php" target="_blank"><img class="icon" src="../../assets/kakao_icon.png" alt=""></a>
+                    <a href="_showBudidayaPengelola.php"><img class="icon" src="../../assets/icon_kakao.png" alt=""></a>
                 </li>
                 <li class="list_data">
-                    <a href=""><img class="icon" src="../../assets/apel_icon.png" alt=""></a>
+                    <a href=""><img class="icon" src="../../assets/icon_anggur.png" alt=""></a>
                 </li>
                 <li class="list_data">
-                    <a href=""><img class="icon" src="../../assets/anggur_icon.png" alt=""></a>
+                    <a href=""><img class="icon" src="../../assets/icon_apel.png" alt=""></a>
                 </li>
             </ul>
         </div>
@@ -52,7 +52,7 @@
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    width: 30%;
+    width: 100%;
     margin-left: 300px;
 }
 .head{
@@ -77,6 +77,15 @@
   
 }
 
+.icon{
+    border-radius: 0px;
+    width: 200px;
+}
+
+.icon:hover{
+    width: 50%;
+    transition: all 0.5s ease;
+}
 .tambah:hover {
   background-color: grey;
 }

@@ -9,7 +9,7 @@
 <body>
     <div class="navbar">
         <ul>
-            <li><a href="pages/petani/_profilePetani.php" class="logo">Profile</a></li>
+            <li><a href="_profilePengelola.php" class="logo">Profile</a></li>
         </ul>
     </div>
 </body>

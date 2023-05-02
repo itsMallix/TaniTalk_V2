@@ -14,7 +14,7 @@
 ?>
 <body>
     <div class="container">
-        <h2 class="text-title">Prakiraan Cuaca</h2>
+        <!-- <h2 class="text-title">Prakiraan Cuaca</h2> -->
         <div class="input-grup">
             <input type="text" class="formControl" id="city" placeholder="Masukkan Nama Kota">
             <br>
@@ -59,10 +59,12 @@
     padding: 10px 20px 50px 20px;
     border-radius: 5px;
     /* margin-top: 300px; */
+    /* display: flex; */
+    /* justify-content: space-between; */
 }
 .searchBtn{
     border: none;
-    background-color: rgb(43, 113, 226);
+    background-color: #6CBB08;
     align-items: center;
     margin-left: 15px;
     color: white;
@@ -114,5 +116,15 @@
     margin-left: auto;
     margin-right: auto;
 }
-
+iframe{
+    float: right;
+    margin-right: 30px;
+    margin-bottom: 100px;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+body{
+    overflow: hidden;
+}
 </style>

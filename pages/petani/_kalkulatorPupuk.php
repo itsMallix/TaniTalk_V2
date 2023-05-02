@@ -13,7 +13,7 @@
         
         if(isset($_POST['hitung'])){
             $dosis = 0.33;
-
+            $hasil = 0;
             if($_POST['pola']=='3'){
                 $jumlah_tanaman = ($_POST['luaslahan'])/($_POST['jarakTanam1'])*($_POST['luaslahan'])/($_POST['jarakTanam2']);
                 $hasil = $jumlah_tanaman * $dosis;
@@ -96,7 +96,9 @@
             </div>
             <button class="hitung" name="hitung">Hitung</button>
             <br>
-            <?php echo "<h2> Hasil : $hasil </h2>"?>
+            <?php 
+                echo "<h2> Hasil : $hasil </h2>"
+            ?>
         </form>
     </div>
 </body>
