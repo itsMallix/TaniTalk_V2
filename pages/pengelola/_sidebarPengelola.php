@@ -1,6 +1,6 @@
 <!-- sidebar  -->
 <div class="sidebar" draggable="false">
-    <ul class="menu">
+    <ul class="menu" id="menu">
         <img src="../../assets/logo_sidebar.jpg" alt="">
         <!-- <li><a href="profilePetani.php"><i class="fa-solid fa-user"></i>Profile</a></li> -->
         <br><br><br><br>
@@ -155,4 +155,13 @@ section h1 {
     font-size: 60px;
     color: #004369;
 }
+#menu li.active a{
+    background-color: #6CBB08;
+}
 </style>
+
+<script>
+$(function(){
+    $('#menu a[href~="' + locaation.href + '"]').parents('li').addClass('active');
+})
+</script>

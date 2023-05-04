@@ -30,8 +30,10 @@
     ?>
     <div class="container">
         <div class="content">
-            <a href=""><img class="premium" src="../../assets/premium.jpg" alt=""></a>
-            <button class="choice">Pilih Tanaman</button>
+            <a href="#"><img class="premium" src="../../assets/premium.jpg" alt=""></a>
+            <!-- <a class="ref" href="_kalkulatorPilihTanaman.php"> -->
+                <button class="choice" onclick="pindah()">Pilih Tanaman</button>
+            <!-- </a> -->
         </div>
     </div>
     <br><br>
@@ -96,7 +98,7 @@
             </div>
             <button class="hitung" name="hitung">Hitung</button>
             <br>
-            <?php echo "<h2> Hasil : $hasil </h2>"?>
+            <?php echo "<h2> Hasil : $hasil gram</h2>"?>
         </form>
     </div>
 </body>
@@ -208,6 +210,10 @@ h2{
   background-color: #fff;
   box-shadow: 0 0 5px #b3b3b3;
 }
-
-
 </style>
+
+<script>
+    function pindah(){
+        window.location.href = "_kalkulatorPilihTanaman.php";
+    }
+</script>

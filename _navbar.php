@@ -12,6 +12,7 @@
             <li><a href="pages/petani/_profilePetani.php" class="logo">Profile</a></li>
         </ul>
     </div>
+    <center><a href="controller/logout.php">Logout</a></center>
 </body>
 </html>
 

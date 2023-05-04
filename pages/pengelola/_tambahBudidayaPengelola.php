@@ -21,7 +21,7 @@
             if(mysqli_query($conn,$query)){
                 $lokasi = "../../assets/upload_budidaya/". $nama_file;
                 move_uploaded_file($tmp_file,$lokasi);
-                echo "<script type='text/javascript'>alert('Data berhasil ditambahkan');window.location='_tambahBudidaya.php';</script>";
+                echo "<script type='text/javascript'>alert('Data berhasil ditambahkan');window.location='_katalogBudidayaPengelola.php';</script>";
             }else{
                 echo "<script type='text/javascript'>alert('Gagal');window.location='_tambahBudidaya.php';</script>";
             }
@@ -31,7 +31,7 @@
     ?>
     <div class="container">
         <div class="content">
-            <form action="" method="post">
+            <form action="" method="post" enctype="multipart/form-data">
                 <h2>TAMBAH DATA BUDIDAYA</h2>
                 <label>Gambar</label>
                 <input type="file" name="gambar" id="">

@@ -17,7 +17,7 @@
             header("locaation:../index.php?pesan=gagal");
         }
 
-        $query = "SELECT * FROM katalog_budidaya WHERE judul = 'Budidaya Buah Tin'";
+        $query = "SELECT * FROM katalog_budidaya WHERE judul = 'Budidaya Kakao'";
         $hasil = mysqli_query($conn,$query);
 
         echo "<br><br><br><br><br><br>";
@@ -27,7 +27,7 @@
             echo "<div class='card'>";
             echo "<h2>" .  $row['judul'] . "</h2>";
             echo "<img class='thumbnail' src='../../assets/upload_budidaya/" .$row['gambar'] ."'alt='gambar'>";
-            echo "<a href='_detailPenyakit.php' target='_blank'><button class='detailBtn'>Detail</button></a>";
+            echo "<a href='budidaya_kakao_detail.php' target='_blank'><button class='detailBtn'>Detail</button></a>";
             // echo "<h3 class='judul'>" . $row['judul'] . "</h3>";
             echo "<p class='deskripsi'>" . $row['deskripsi'] . "</p>";
             echo "</div></div>";
