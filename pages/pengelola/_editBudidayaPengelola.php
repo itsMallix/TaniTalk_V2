@@ -26,13 +26,15 @@
 				move_uploaded_file($tmp_file, $lokasi);
 			}
 
-			$querry = "update katalog_budidaya set judul='$judul', deskripsi='$deskripsi'";
-			if($gambar != ''){
-				$querry .= ", gambar='$nama_file'";
-			}
-			$querry .= " where id='$id_'";
+			$querry = "update katalog_budidaya set judul='$judul', deskripsi='$deskripsi', pengelola=1, gambar='$nama_file' where id='$id'";
+			// if($gambar != ''){
+			// 	$querry .= ", gambar='$nama_file'";
+			// }
+			// $querry .= " where id='$id_'";
 
 			if(mysqli_query($conn, $querry)){
+				$_SESSION['success']  = "data berhasil diedit";
+                echo "<script type='text/javascript'>alert('Simpan Berhasil');window.location='_katalogBudidayaPengelola.php';</script>";
 				header("location:_hapusBudidayaPengelola.php");
 			}
 		}

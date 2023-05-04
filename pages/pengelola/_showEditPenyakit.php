@@ -20,21 +20,23 @@
 			$nama_file = $_FILES['gambar']['name'];
             $tmp_file = $_FILES['gambar']['tmp_name'];
 			$gambar = $_POST['gambar']; 
+			// $edit = date("Y-m-d");
 
 			if($_FILES['gambar']['name'] != ''){
-				$lokasi = "../assets/upload_budidaya/" . $nama_file;
+				$lokasi = "../assets/upload_penyakit/" . $nama_file;
 				// $gambar = $lokasi . $_FILES['gambar']['nama'];
 				move_uploaded_file($tmp_file, $lokasi);
 			}
 
-			$querry = "update katalog_budidaya set judul='$judul', deskripsi='$deskripsi'";
-			if($gambar != ''){
-				$querry .= ", gambar='$nama_file'";
-			}
-			$querry .= " where id='$id_'";
+			$querry = "update katalog_penyakit set nama_penyakit='$judul', jenis_penyakit='$jenis', deskripsi='$deskripsi', pengelola=1, gambar='$nama_file' where id='$id'";
+			// if($gambar != ''){
+			// 	$querry .= ", gambar='$nama_file'";
+			// }
+			// $querry .= " where id='$id_'";
 
 			if(mysqli_query($conn, $querry)){
-				header("location:_hapusBudidayaPengelola.php");
+				echo "berhasil";
+				header("location:_katalogPenyakitPengelola.php");
 			}
 		}
 		// ../../controller/update.php
@@ -44,10 +46,10 @@
 		<input type="hidden" id="id_penyakit" name="id" value="<?php echo $data['id'] ?>">
 
 		<label for="nama_penyakit">Nama Penyakit</label>
-		<input type="text" id="nama_penyakit" name="judul" value="<?= $data['nama_penyakit']?>">
+		<input type="text" id="nama_penyakit" name="nama_penyakit" value="<?= $data['nama_penyakit']?>">
 		
         <label for="jenis_penyakit">Jenis Penyakit</label>
-		<input type="text" id="nama_penyakit" name="jenis" value="<?= $data['jenis_penyakit']?>">
+		<input type="text" id="jenis_penyakit" name="jenis_penyakit" value="<?= $data['jenis_penyakit']?>">
 
 		<label for="deskripsi_penyakit">Deskripsi Penyakit</label>
 		<textarea id="deskripsi_penyakit" name="deskripsi"><?= $data['deskripsi']?></textarea>
