@@ -9,23 +9,12 @@
 </head>
 <body>
     </div>
-    <div class="floating_container_1">
-        <div class="floating_btn">
-            <div class="element">
-                <a href="_editBudidayaPengelola.php" target="_blank">
-                    <span class="float_element">
-                        <i class="fa-solid fa-pen-to-square"></i>
-                    </span>
-                </a>
-            </div>
-        </div>
-    </div>
     <div class="floating_container_2">
         <div class="floating_btn">
             <div class="element">
                 <a href="_hapusBudidayaPengelola.php" target="_blank">
                     <span class="float_element">
-                        <i class="fa-solid fa-trash"></i>
+                        <i class="fa-solid fa-pen-to-square"></i>
                     </span>
                 </a>
             </div>
@@ -39,16 +28,6 @@
         background: #eaedf2;
     }
 
-    .floating_container_1{
-        position: fixed;
-        width: 100px;
-        height: 100px;
-        bottom: 0;
-        right: 0;
-        margin-right: 25px;
-        margin-bottom: 40px;
-    }
-
     .floating_container_2{
         position: fixed;
         width: 100px;
@@ -56,7 +35,7 @@
         bottom: 0;
         right: 0;
         margin-right: 25px;
-        margin-bottom: 115px;
+        margin-bottom: 40px;
     }
 
     .floating_container:hover{

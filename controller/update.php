@@ -5,19 +5,13 @@
         $id = $_GET['id'];
         $judul = $_POST['judul'];
         $deskripsi = $_POST['deskripsi'];
-        // $gambar = $_POST['gambar'];
+        $gambar = $_POST['gambar'];
         $nama_file = $_FILES['gambar']['name'];
         $tmp_file = $_FILES['gambar']['tmp_name'];
         $pengelola = 1;
         $edit = time();
 
-        $sql = "update `katalog_budidaya` set 
-                `judul` = '$judul',
-                `deskripsi` = '$deskripsi',
-                `editedAt` = '$edit',
-                `pengelola` = '$pengelola',
-                `gambar` = '$nama_file'
-                where id = $id";
+        $sql = "update katalog_budidaya set judul=$judul, deskripsi=$deskripsi, pengelola=$pengelola, gambar=$nama_file";
 
         if($conn->query($sql)){
             $lokasi = "../assets/upload_budidaya/";

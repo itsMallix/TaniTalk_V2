@@ -30,9 +30,7 @@
             echo "<div class='card'>";
             echo "<h2>" .  $row['nama_penyakit'] . "</h2>";
             echo "<img class='thumbnail' src='../../assets/upload_penyakit/" .$row['gambar'] ."'alt='gambar'>";
-            echo "<a href='_detailPenyakitPengelola.php' target='_blank'><button class='detailBtn'>Detail</button></a>";
-            // echo "<h3 class='judul'>" . $row['judul'] . "</h3>";
-            // echo "<p class='deskripsi'>" . $row['deskripsi'] . "</p>";
+            echo "<a href='_detailPenyakitPengelola.php' target='_blank' id='$row[id]' name='submit'><button class='detailBtn'>Detail</button></a>";
             echo "</div></div>";
         }
     ?>
@@ -119,3 +117,17 @@ body{
 }
 
 </style>
+<script>
+var button = document.getElementById("btn1");
+button.addEventListener("click", function() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("data").innerHTML = this.responseText;
+    }
+  };
+  xhr.open("GET", "get_data.php?id=1", true); // Ganti "1" dengan ID yang Anda inginkan
+  xhr.send();
+});
+
+</script>

@@ -23,11 +23,11 @@ class User {
         $level = $this->level;
 
         if(empty($nama) || empty($email)  || empty($password) || empty($level)){
-            echo "Field tidak boleh kosong";
+            echo "<script type='text/javascript'>alert('Field tidak boleh kosong');window.location='../register.php';</script>";
             exit();
         }
 
-        $sql = "select * from user where nama = '$nama' or password = '$password'";
+        $sql = "select * from user where email = '$email' or password = '$password'";
         $hasil = $this->conn->query($sql);
 
         if($hasil->num_rows > 0){

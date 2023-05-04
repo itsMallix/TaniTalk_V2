@@ -5,16 +5,37 @@
 </head>
 <body>
     <?php
-        include "../../controller/conn.php";
-        
-        $sql = "select * from katalog_budidaya";
+		include "../../controller/conn.php";
+        $id = $_GET['id'];
+		$sql = "select * from katalog_budidaya";
         $hasil = $conn->query($sql);
-        
-        $data = $hasil->fetch_assoc();
+		$data = $hasil->fetch_assoc();
+		
+		if(isseT($_POST['submit'])){
+			
+			$id = $_POST['id'];
+			$judul = $_POST['judul'];
+			$deskripsi = $_POST['deskripsi'];
+			$gambar = '';
+			if($_FILES['gambar']['name'] != ''){
+				$gambar = '../../assets/upload_budidaya/' . $_FILES['gambar']['nama'];
+				move_uploaded_file($_FILES['gambar']['tmp_name'], $gambar);
+			}
+
+			$querry = "update katalog_budidaya set judul='$judul', deskripsi='$deskripsi'";
+			if($gambar != ''){
+				$querry .= ", gambar='$gambar'";
+			}
+			$querry .= " where id='$id'";
+
+			if(mysqli_query($conn, $querry)){
+				header("location:_hapusBudidayaPengelola.php");
+			}
+		}
     ?>
 	<h1>Edit Budidaya</h1>
-	<form action="../../controller/update.php" method="post" enctype="multipart/form-data">
-		<input type="hidden" id="id_budidaya" name="id_budidaya" value="">
+	<form action="../../controller/update.php" method="post" enctype="multipart/form-data" onsubmit="return confirm('Simpan perubahan?');">
+		<input type="hidden" id="id_budidaya" name="id" value="<?php echo $data['id'] ?>">
 
 		<label for="nama_penyakit">Nama Penyakit</label>
 		<input type="text" id="nama_pbudidaya" name="judul" value="<?= $data['judul']?>">

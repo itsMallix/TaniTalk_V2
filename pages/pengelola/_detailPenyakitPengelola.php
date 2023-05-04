@@ -9,18 +9,18 @@
 <body>
     <?php
         include "../../controller/conn.php";
-        $query = "SELECT * FROM katalog_penyakit";
+        $query = "SELECT * FROM katalog_penyakit where id = 1";
         $hasil = mysqli_query($conn,$query);
-
+        
         while($row = mysqli_fetch_array($hasil)){
-            echo "<div class='cardRow'>";
-            echo "<div class='cardCol'>";
-            echo "<div class='card'>";
-            echo "<h2>" .  $row['nama_penyakit'] . "</h2>";
-            echo "<img class='thumbnail' src='../../assets/upload_penyakit/" .$row['gambar'] ."'alt='gambar'>";
-            echo "<p class='deskripsi'>" . $row['deskripsi'] . "</p>";
-            echo "</div></div>";
-        }
+                echo "<div class='cardRow'>";
+                echo "<div class='cardCol'>";
+                echo "<div class='card'>";
+                echo "<h2>" .  $row['nama_penyakit'] . "</h2>";
+                echo "<img class='thumbnail' src='../../assets/upload_penyakit/" .$row['gambar'] ."'alt='gambar'>";
+                echo "<p class='deskripsi'>" . $row['deskripsi'] . "</p>";
+                echo "</div></div>";
+            }
     ?>
     <a class="premium" href="_premiumPengelola.php"><img src="../../assets/button_premium.jpg" alt=""></a>
 </body>
@@ -62,3 +62,4 @@ h2, p, img{
 }
 
 </style>
+

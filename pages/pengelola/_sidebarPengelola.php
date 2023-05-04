@@ -10,7 +10,7 @@
         <li class="nav"><a href="_kalkulatorPupuk.php"><i class="fa-solid fa-calculator"></i>Kalkulasi pupuk</a></li>
         <li class="nav"><a href="#"><i class="fa-solid fa-seedling"></i>Formulasi pupuk</a></li>
         <li class="nav"><a href="#"><i class="fa-solid fa-book"></i>Pencatatan</a></li>
-        <!-- <li class="nav"><a href="_cuaca.php"><i class="fa-solid fa-cloud"></i>Cuaca</a></li> -->
+        <li class="nav"><a href="_cuaca.php"><i class="fa-solid fa-cloud"></i>Cuaca</a></li>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <!-- <li><a href="../../config/logout.php"><i class="fa-solid fa-power-off"></i>Logout</a></li> -->
     </ul>

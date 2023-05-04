@@ -30,12 +30,17 @@
                     <td>$row[deskripsi]</td>
                     <td>$row[gambar]</td>
                     <td>
-                        <a href='../../controller/hapus.php?id=$row[id]'>HAPUS</a>
-                        <a href='_editBudidayaPengelola.php?id=$row[id]'>EDIT</a>
+                    <a href='../../controller/hapus.php?id=$row[id]' 
+                        onClick=\"
+                            if(confirm('Apakah Anda yakin ingin menghapus data ini?'))
+                                {window.location.href = '_hapusBudidayaPengelola.php'}
+                            else{return false;}\">Hapus</a>
+                    <a href='_editBudidayaPengelola.php?id=$row[id]'>EDIT</a>
                     </td>
-                ";
-            }
-        ?>
+                    ";
+                }
+                ?>
+                <!-- <a href='../../controller/hapus.php?id=$row[id]'>HAPUS</a> -->
     </table>
     </body>
 </html>
