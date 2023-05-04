@@ -18,5 +18,19 @@
             header("locaation:../index.php?pesan=gagal");
         }
     ?>
+
+    <div class="container">
+        <br><br><br><br><br>
+        <img class="banner" src="../../assets/home.jpg" alt="">
+    </div>
 </body>
 </html>
+
+<style>
+    .banner{
+        border-radius: 10px;
+        width: 60%;
+        margin-left: 300px;
+
+    }
+</style>

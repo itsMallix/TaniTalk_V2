@@ -17,7 +17,7 @@
             header("locaation:../index.php?pesan=gagal");
         }
 
-        $query = "SELECT * FROM katalog_budidaya WHERE judul = 'Budidaya Kakao'";
+        $query = "SELECT * FROM katalog_budidaya WHERE judul = 'Budidaya Buah Tin'";
         $hasil = mysqli_query($conn,$query);
 
         echo "<br><br><br><br><br><br>";

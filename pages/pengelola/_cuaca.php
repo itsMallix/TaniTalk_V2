@@ -29,6 +29,8 @@
 
                 <input type="checkbox" class="box1" name="weather" id="forecast">
                 <label for="forcast">Prakiraan Cuaca</label>
+
+                <!-- <iframe style="float:right" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3949.364508146232!2d113.71429927461817!3d-8.165982281828327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd6943505e30a6d%3A0x4a4df80f122d472f!2sFakultas%20Ilmu%20Komputer%20Universitas%20Jember!5e0!3m2!1sid!2sid!4v1683170415546!5m2!1sid!2sid" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
             </div>
         </div>
         <br>
@@ -58,7 +60,6 @@
     width: 350px;
     padding: 10px 20px 50px 20px;
     border-radius: 5px;
-    /* margin-top: 300px; */
     /* display: flex; */
     /* justify-content: space-between; */
 }

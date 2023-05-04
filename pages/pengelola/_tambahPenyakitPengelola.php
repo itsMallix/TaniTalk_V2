@@ -24,7 +24,7 @@
             }elseif(mysqli_query($conn,$query)){
                 $lokasi = "../../assets/upload_penyakit/". $nama_file;
                 move_uploaded_file($tmp_file,$lokasi);
-                echo "<script type='text/javascript'>alert('Data berhasil ditambahkan');window.location='_tambahPenyakitPengelola.php';</script>";
+                echo "<script type='text/javascript'>alert('Data berhasil ditambahkan');window.location='_katalogPenyakitPengelola.php';</script>";
             }else{
                 echo "<script type='text/javascript'>alert('Gagal');window.location='_tambahBudidaya.php';</script>";
             }

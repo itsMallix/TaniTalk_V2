@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Form Budidaya</title>
+	<title>Form Penyakit</title>
 </head>
 <body>
     <?php
 		include "../../controller/conn.php";
-		$sql = "select * from katalog_budidaya";
+		$sql = "select * from katalog_penyakit";
 		$id = $_GET['id'];
         $hasil = $conn->query($sql);
 		$data = $hasil->fetch_assoc();
@@ -14,7 +14,8 @@
 		if(isseT($_POST['submit'])){
 			
 			$id_ = $_POST['id'];
-			$judul = $_POST['judul'];
+			$judul = $_POST['nama_penyakit'];
+			$jenis = $_POST['jenis_penyakit'];
 			$deskripsi = $_POST['deskripsi'];
 			$nama_file = $_FILES['gambar']['name'];
             $tmp_file = $_FILES['gambar']['tmp_name'];
@@ -38,12 +39,15 @@
 		}
 		// ../../controller/update.php
     ?>
-	<h1>Edit Budidaya</h1>
+	<h1>Edit Penyakit</h1>
 	<form action="#" method="post" enctype="multipart/form-data" onsubmit="return confirm('Simpan perubahan?');">
-		<input type="hidden" id="id_budidaya" name="id" value="<?php echo $data['id'] ?>">
+		<input type="hidden" id="id_penyakit" name="id" value="<?php echo $data['id'] ?>">
 
 		<label for="nama_penyakit">Nama Penyakit</label>
-		<input type="text" id="nama_pbudidaya" name="judul" value="<?= $data['judul']?>">
+		<input type="text" id="nama_penyakit" name="judul" value="<?= $data['nama_penyakit']?>">
+		
+        <label for="jenis_penyakit">Jenis Penyakit</label>
+		<input type="text" id="nama_penyakit" name="jenis" value="<?= $data['jenis_penyakit']?>">
 
 		<label for="deskripsi_penyakit">Deskripsi Penyakit</label>
 		<textarea id="deskripsi_penyakit" name="deskripsi"><?= $data['deskripsi']?></textarea>
