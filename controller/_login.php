@@ -20,11 +20,12 @@ class User {
         $login = mysqli_query($conn, "select * from user where email = '$email' and password = '$paswd'");
         $check = mysqli_num_rows($login);
 
-        if($email <= 0){
-            echo "<script type='text/javascript'>alert('Email Tidak Valid');window.location='../login.php';</script>";
-        }
         if($check > 0){
             $data = mysqli_fetch_assoc($login);
+            
+            if($email != $check['email'] || $paswd != $check['password']){
+                echo "<script type='text/javascript'>alert('Email Tidak Valid');window.location='../login.php';</script>";
+            }
             
             if($data['level']=='petani'){
                 $_SESSION['email'] = $email;
@@ -39,11 +40,11 @@ class User {
             }
             else{
                 echo "<script type='text/javascript'>alert('Email atau password salah');window.location='../login.php';</script>";
-                header("location:../login.php;");
+                header("location:login.php;");
             }
         }else{
             echo "<script type='text/javascript'>alert('Email atau password salah');window.location='../login.php';</script>";
-            header("location:../login.php");
+            header("location:login.php");
         }
     }
 }

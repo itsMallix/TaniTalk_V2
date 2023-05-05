@@ -53,7 +53,7 @@
                 <label>Level</label>
                 <input type="text" name="level" class="formLogin" placeholder="petani atau pengelola" required="required">
 
-                <input type="submit" class="loginBtn" value="Login" name="submit">
+                <input type="submit" class="loginBtn" value="Sign Up" name="submit">
                 <p>Sudah Punya akun?<a href="login.php">Log In</a></p>
             </form>
         </div>
