@@ -1,0 +1,12 @@
+Planning, mengapa software harus di kembangkan
+- sistem req
+- feasibility analysys (project size est)
+Analysis, siapa pengguna dan alur kerja software
+- requirement
+
+=========BPMN=========
+bussiness proses model notation
+1. swinlane = mekanisme mengatur dan memisahkan peran atau tanggunag jawab (pool)(lane)
+2. connecting object = konektor pada suatu proses (sequence, message, association )
+3. artifact = informasi tambahan
+4. flow object = object yg ngalir

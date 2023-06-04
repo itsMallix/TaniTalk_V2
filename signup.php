@@ -45,7 +45,7 @@
                 <input type="text" name="nama" class="formLogin" placeholder="Masukkan Nama" required="required">
 
                 <label>Email</label>
-                <input type="text" name="email" class="formLogin" placeholder="Masukkan Email" required="required">
+                <input type="email" name="email" class="formLogin" placeholder="Masukkan Email" required="required">
     
                 <label>Password</label>
                 <input type="password" name="password" class="formLogin" placeholder="Masukkan Password" required="required">

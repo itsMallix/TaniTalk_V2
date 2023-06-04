@@ -1,0 +1,25 @@
+# T Pelaksanaan
+- flowchart pelaksanaan
+
+# Studi literature
+- mengambil literatur yang berhubungan dengan website, ecommerce, sdlc
+- website, server, nginx, frontend, backend, programming, b2b, b2c, c2c, c2b etc
+
+# Perancangan model sistem
+- dijelasin interaksi dari server ke web, dan web ke client
+- flowchart program mungkin
+
+# Pembuatan alat/platform
+- dijelasin urutannya dari prototyping > slicing > coding > hosting > publishing
+
+# Pengujian alat/platform
+- ngujinya bisa setelah di publish atau di uji di server lokal dulu
+
+# Analisa & eval
+# Pembuatan laporan dan Dokumentasi 
+
+
+R. A.S. and M. Shalahuddin, “Shalahuddin, M.Rosa A.S. Rekayasa Perangkat Lunak ( Terstruktur dan
+Berorientasi Objek),” Inform. Bandung, 2015.
+
+Wardatul S, 2020. Pembuatan Slicing Sebagai Mediasi Antara User Interface Dengan Front-end Human Resources Pada PT. Sarana Mendulang Arta. 2
