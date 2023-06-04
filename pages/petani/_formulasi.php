@@ -19,7 +19,7 @@
             header("locaation:../index.php?pesan=gagal");
         }
 
-        $query = "SELECT * FROM katalog_penyakit";
+        $query = "SELECT * FROM formulasi_pupuk";
         $hasil = mysqli_query($conn,$query);
 
         echo "<br><br><br><br><br><br>";
@@ -27,8 +27,8 @@
             echo "<div class='cardRow'>";
             echo "<div class='cardCol'>";
             echo "<div class='card'>";
-            echo "<h2>" .  $row['nama_penyakit'] . "</h2>";
-            echo "<img class='thumbnail' src='../../assets/upload_penyakit/" .$row['gambar'] ."'alt='gambar'>";
+            echo "<h2>" .  $row['nama'] . "</h2>";
+            echo "<img class='thumbnail' src='../../assets/upload_formulasi/" .$row['gambar'] ."'alt='gambar'>";
             echo "<a href='_detailPenyakit.php' target='_blank'><button class='detailBtn'>Detail</button></a>";
             // echo "<h3 class='judul'>" . $row['judul'] . "</h3>";
             // echo "<p class='deskripsi'>" . $row['deskripsi'] . "</p>";
@@ -80,7 +80,7 @@
     display: grid;
 }
 
-h2{
+h2, h5{
     text-align: center;
 }
 

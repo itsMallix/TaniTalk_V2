@@ -8,8 +8,8 @@
         <li class="nav"><a href="_katalogPenyakitPengelola.php"><i class="fa-solid fa-bug"></i>Katalog Penyakit</a></li>
         <li class="nav"><a href="_katalogBudidayaPengelola.php"><i class="fa-solid fa-lemon"></i>Katalog Budidaya</a></li>
         <li class="nav"><a href="_kalkulatorPupuk.php"><i class="fa-solid fa-calculator"></i>Kalkulasi pupuk</a></li>
-        <li class="nav"><a href="#"><i class="fa-solid fa-seedling"></i>Formulasi pupuk</a></li>
-        <li class="nav"><a href="#"><i class="fa-solid fa-book"></i>Pencatatan</a></li>
+        <!-- <li class="nav"><a href="#"><i class="fa-solid fa-seedling"></i>Formulasi pupuk</a></li> -->
+        <li class="nav"><a href="_pencatatan.php"><i class="fa-solid fa-book"></i>Pencatatan</a></li>
         <li class="nav"><a href="_cuaca.php"><i class="fa-solid fa-cloud"></i>Cuaca</a></li>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <!-- <li><a href="../../config/logout.php"><i class="fa-solid fa-power-off"></i>Logout</a></li> -->
