@@ -25,6 +25,9 @@ class User {
             
             if($email != $check['email'] || $paswd != $check['password']){
                 echo "<script type='text/javascript'>alert('Email Tidak Valid');window.location='../login.php';</script>";
+            }else{
+                echo "<script type='text/javascript'>alert('Email atau password salah');window.location='../login.php';</script>";
+                header("location:login.php;");
             }
             
             if($data['level']=='petani'){
@@ -37,10 +40,6 @@ class User {
                 $_SESSION['email'] = $email;
                 $_SESSION['level'] = 'pengelola';
                 header("location:../pages/pengelola/_dashboardPengelola.php");
-            }
-            else{
-                echo "<script type='text/javascript'>alert('Email atau password salah');window.location='../login.php';</script>";
-                header("location:login.php;");
             }
         }else{
             echo "<script type='text/javascript'>alert('Email atau password salah');window.location='../login.php';</script>";

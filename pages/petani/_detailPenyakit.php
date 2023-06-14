@@ -9,7 +9,7 @@
 <body>
     <?php
         include "../../controller/conn.php";
-        $query = "SELECT * FROM katalog_penyakit";
+        $query = "SELECT * FROM katalog_penyakit where id = 1";
         $hasil = mysqli_query($conn,$query);
 
         while($row = mysqli_fetch_array($hasil)){
@@ -22,7 +22,7 @@
             echo "</div></div>";
         }
     ?>
-    <a class="premium" href="_premiumPage.php"><img src="../../assets/button_premium.jpg" alt=""></a>
+    <!-- <a class="premium" href="_premiumPage.php"><img src="../../assets/button_premium.jpg" alt=""></a> -->
 </body>
 </html>
 <style>

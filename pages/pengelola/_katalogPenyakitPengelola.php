@@ -22,7 +22,7 @@
 
         $query = "SELECT * FROM katalog_penyakit";
         $hasil = mysqli_query($conn,$query);
-
+        $count = 0;
         echo "<br><br><br><br><br><br>";
         while($row = mysqli_fetch_array($hasil)){
             echo "<div class='cardRow'>";
@@ -30,8 +30,12 @@
             echo "<div class='card'>";
             echo "<h2>" .  $row['nama_penyakit'] . "</h2>";
             echo "<img class='thumbnail' src='../../assets/upload_penyakit/" .$row['gambar'] ."'alt='gambar'>";
-            echo "<a href='_detailPenyakitPengelola.php' target='_blank' id='$row[id]' name='submit'><button class='detailBtn'>Detail</button></a>";
+            echo "<a href='_detailPenyakitPengelola.php?id=" . $row['id'] . "' target='_blank' name='submit'><button class='detailBtn'>Detail</button></a>";
             echo "</div></div>";
+            $count++;
+            if($count%4==0){
+                echo "</div></div></div><div class='cardRow>'";
+            }
         }
     ?>
     </div>
@@ -57,6 +61,9 @@
     width: 50%;
     margin-left: 430px;
     margin-top: 10px;
+}
+.tabel{
+    margin-left: 300px;
 }
 
 .card img{

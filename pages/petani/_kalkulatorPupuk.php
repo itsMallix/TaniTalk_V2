@@ -10,7 +10,7 @@
     <?php
         include "_sidebarPetani.php";
         include "../../_navbar.php"; 
-        
+        $hasil = 0;
         if(isset($_POST['hitung'])){
             $dosis = 0.33;
             $hasil = 0;
@@ -97,7 +97,7 @@
             <button class="hitung" name="hitung">Hitung</button>
             <br>
             <?php 
-                echo "<h2> Hasil : $hasil </h2>"
+                echo "<h2> Hasil : $hasil gram/tanaman</h2>"
             ?>
         </form>
     </div>

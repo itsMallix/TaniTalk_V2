@@ -8,6 +8,13 @@
     <?php
     include '_sidebarPetani.php';
     include '../../_navbar.php';
+    include '../../controller/conn.php';
+
+    $sql = "SELECT * FROM pencatatan";
+    $hasil = mysqli_query($conn,$sql);
+    if(!$hasil){
+        die("Query gagal: ". mysqli_error($conn));
+    }
     ?>
 </head>
 <body>
@@ -15,6 +22,7 @@
         <input type="file" name="file">
         <input type="submit" name="upload" value="UPLOAD">
     </form>
+    <br><br><br>
 </body>
 </html>
 
